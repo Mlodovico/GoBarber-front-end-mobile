@@ -1,26 +1,39 @@
 import styled from 'styled-components/native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-export const DashBoardView = styled.View`
-  background: #232129;
+export const Container = styled.View`
   flex: 1;
 `;
 
-export const LogOutButton = styled.TouchableOpacity`
-  width: 30%;
-  height: 40px;
+export const Header = styled.View`
+  padding: 24px;
+  padding-top: ${getStatusBarHeight() + 24}px;
+  background: #232129;
+
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-
-  margin-top: 20px;
-
-  background: #ff9000;
 `;
 
-export const LogOutText = styled.Text`
-  font-size: 15px;
+export const HeaderTitle = styled.Text`
+  color: #f4ede8;
+  font-size: 24px;
+  font-family: 'RobotoSlab-Regular';
+  line-height: 28px;
+`;
+
+export const UserName = styled.Text`
+  color: #ff9000;
   font-family: 'RobotoSlab-Medium';
-  color: #312e38;
+`;
+
+export const ProfileButton = styled.TouchableOpacity`
+`;
+
+export const UserAvatar = styled.Image`
+  width: 56px;
+  height: 56px;
+  line-height: 28px;
 `;
 
 
